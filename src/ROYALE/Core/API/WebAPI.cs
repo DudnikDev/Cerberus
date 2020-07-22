@@ -22,10 +22,10 @@ namespace CRepublic.Royale.Core.API
                 this.Prefixer = new Prefixer();
                 this.Listener = new HttpListener();
 
-                this.Listener.Prefixes.Add("http://barbarianland.xyz:8080/");
+                this.Listener.Prefixes.Add("http://barbarianland.xyz:8081/");
                 this.Listener.Start();
 
-                Console.WriteLine("The Web API has been sucessfully started on http://barbarianland.xyz:8080/");
+                Console.WriteLine("The Web API has been sucessfully started on http://barbarianland.xyz:8081/");
 
                 while (true)
                 {
@@ -120,7 +120,7 @@ namespace CRepublic.Royale.Core.API
             get
             {
                 TcpConnectionInformation[] _Connections = IPGlobalProperties.GetIPGlobalProperties().GetActiveTcpConnections();
-                return _Connections.Any(_Connection => _Connection.LocalEndPoint.Port == 8080);
+                return _Connections.Any(_Connection => _Connection.LocalEndPoint.Port == 8081);
             }
         }
     }

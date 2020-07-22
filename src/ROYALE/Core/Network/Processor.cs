@@ -10,7 +10,7 @@ namespace CRepublic.Royale.Core.Network
     {
         internal static void Recept(this Packets.Message Message)
         {
-            if (Constants.Encryption == Logic.Enums.Server_Crypto.RC4)
+            if (Constants.Encryption == Logic.Enums.Server_Crypto.SODIUM)
             {
                 Message.DecryptRC4();
             }
@@ -30,7 +30,7 @@ namespace CRepublic.Royale.Core.Network
             {
                 Message.Encode();
 
-                if (Constants.Encryption == Logic.Enums.Server_Crypto.RC4)
+                if (Constants.Encryption == Logic.Enums.Server_Crypto.SODIUM)
                 {
                     Message.EncryptRC4();
                 }

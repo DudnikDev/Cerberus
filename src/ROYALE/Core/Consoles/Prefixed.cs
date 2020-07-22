@@ -17,7 +17,7 @@
 
         public override void Write(string Message)
         {
-            this.Original.Write("[BL.Servers]    {0}", Message);
+            this.Original.Write("[Error / Warnig]    {0}", Message);
         }
 
         public override void WriteLine(string Message)

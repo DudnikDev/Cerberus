@@ -35,7 +35,7 @@ namespace CRepublic.Royale.Core
             Server_Resources.Battles = new Battles();
             Server_Resources.Random = new Random();
             Server_Resources.Region = new Region();
-            Server_Resources.WebAPI = new WebAPI();
+           // Server_Resources.WebAPI = new WebAPI();
             Server_Resources.Gateway = new Gateway();
             Server_Resources.Parser = new Parser();
         }

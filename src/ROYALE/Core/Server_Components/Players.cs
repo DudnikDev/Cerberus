@@ -74,7 +74,7 @@ namespace CRepublic.Royale.Core.Server_Components
                     case DBMS.MySQL:
                         using (MysqlEntities Database = new MysqlEntities())
                         {
-                            var Data = Database.PlayerDB.Find(UserId);
+                            var Data = Database.Player.Find(UserId);
 
                             if (!string.IsNullOrEmpty(Data?.Data))
                             {
@@ -166,7 +166,7 @@ namespace CRepublic.Royale.Core.Server_Components
 
                         using (MysqlEntities Database = new MysqlEntities())
                         {
-                            Database.PlayerDB.Add(new CR.Database.Player
+                            Database.Player.Add(new Royale.Database.Player
                             {
                                 ID = Player.UserId,
                                 Data = JsonConvert.SerializeObject(Player, this.Settings)
@@ -224,7 +224,7 @@ namespace CRepublic.Royale.Core.Server_Components
 
                         using (MysqlEntities Database = new MysqlEntities())
                         {
-                            var Data = Database.PlayerDB.Find(Player.UserId);
+                            var Data = Database.Player.Find(Player.UserId);
 
                             if (Data != null)
                             {

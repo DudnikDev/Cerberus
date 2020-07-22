@@ -28,15 +28,15 @@ namespace CRepublic.Royale.Core
 
         internal const DBMS Database = DBMS.Both;
 
-        internal const Server_Crypto Encryption = Server_Crypto.RC4;
+        internal const Server_Crypto Encryption = Server_Crypto.SODIUM;
 
-        internal const Server_Mode Mode = Server_Mode.PRODUCTION;
+        internal const Server_Mode Mode = Server_Mode.PRODUCTION;//this i test
 
         internal const int ServerPort = 9339;
 
-        internal static string[] AuthorizedIP =
+       /* internal static string[] AuthorizedIP =
         {
             "70.68.246.228"
-        };
+        };*/
     }
 }

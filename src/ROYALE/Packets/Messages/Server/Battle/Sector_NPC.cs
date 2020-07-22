@@ -316,7 +316,7 @@ namespace CRepublic.Royale.Packets.Messages.Server.Battle
             this.Data.AddVInt(4);
             this.Data.AddVInt(6);
             this.Data.AddRange("7B067E0403000204007F7F000000".HexaToBytes());
-            this.Data.AddVInt(5); // Elixir Start
+            this.Data.AddVInt(999); // Elixir Start 5 defualt
             this.Data.AddRange("00000000007F7F7F7F7F7F7F7F".HexaToBytes());
 
             for (int Index = 0; Index < 48; Index++)

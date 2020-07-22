@@ -99,7 +99,7 @@ namespace CRepublic.Royale.Logic
                         {
                             try
                             {
-                                if (Constants.Encryption == Enums.Server_Crypto.RC4)
+                                if (Constants.Encryption == Enums.Server_Crypto.SODIUM)
                                     _Message.DecryptRC4();
                                 else
                                     _Message.DecryptSodium();
@@ -164,7 +164,7 @@ namespace CRepublic.Royale.Logic
 #if DEBUG
                         Loggers.Log(Utils.Padding(this.GetType().Name, 15) + " : Aborting, we can't handle the following message : ID " + type + ", Length " + length + ".", true, Defcon.WARN);
 #endif
-                        if (Constants.Encryption == Enums.Server_Crypto.RC4)
+                        if (Constants.Encryption == Enums.Server_Crypto.SODIUM)
                         {
                             this.RC4.Decrypt(ref packet);
                         }

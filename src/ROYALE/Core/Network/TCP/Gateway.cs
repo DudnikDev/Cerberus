@@ -135,7 +135,7 @@ namespace CRepublic.Royale.Core.Network.TCP
             {
                 if (Constants.Local)
                 {
-                    if (!Constants.AuthorizedIP.Contains(Socket.RemoteEndPoint.ToString().Split(':')[0]))
+                  /*  if (!Constants.AuthorizedIP.Contains(Socket.RemoteEndPoint.ToString().Split(':')[0]))
                     {
                         Socket.Close();
                         AsyncEvent.AcceptSocket = null;
@@ -143,7 +143,7 @@ namespace CRepublic.Royale.Core.Network.TCP
                         if (startNew)
                             StartAccept();
                         return;
-                    }
+                    }*/
                 }
 
 

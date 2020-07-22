@@ -13,6 +13,7 @@ using CRepublic.Royale.Logic.Enums;
 using CRepublic.Royale.Packets.Cryptography;
 using CRepublic.Royale.Files;
 using CRepublic.Royale.Core;
+using CRepublic.Royale.Extensions;
 
 namespace CRepublic.Royale.Packets.Messages.Server.Authentication
 {
@@ -37,7 +38,7 @@ namespace CRepublic.Royale.Packets.Messages.Server.Authentication
             this.Version = 2;
         }
             
-        internal string ContentURL => Fingerprint.Custom ? "http://192.168.0.5/" : "http://b46f744d64acd2191eda-3720c0374d47e9a0dd52be4d281c260f.r11.cf2.rackcdn.com/";
+        internal string ContentURL => Fingerprint.Custom ? Utils.ParseConfigString("PatchUrl") : "http://b46f744d64acd2191eda-3720c0374d47e9a0dd52be4d281c260f.r11.cf2.rackcdn.com/";
 
         internal override void Encode()
         {

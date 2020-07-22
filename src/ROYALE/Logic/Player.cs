@@ -1,4 +1,5 @@
-﻿using CRepublic.Royale.Logic.Components;
+﻿using CRepublic.Royale.Extensions;
+using CRepublic.Royale.Logic.Components;
 using CRepublic.Royale.Logic.Enums;
 using CRepublic.Royale.Logic.Slots;
 using CRepublic.Royale.Logic.Slots.Items;
@@ -65,7 +66,7 @@ namespace CRepublic.Royale.Logic
 
         [JsonProperty("lvl")] internal int Level = 13;
         [JsonProperty("xp")] internal int Experience = 0;
-        [JsonProperty("arena")] internal int Arena = 21;
+        [JsonProperty("arena")] internal int Arena = 1;
 
         [JsonProperty("tutorials")] internal byte Tutorial = 8;
         [JsonProperty("changes")] internal byte Changes = 0;
@@ -75,7 +76,7 @@ namespace CRepublic.Royale.Logic
         [JsonProperty("loses")] internal int Loses = 0;
         [JsonProperty("games_played")] internal int Games_Played = 0;
 
-        [JsonProperty("trophies")] internal int Trophies = 0;
+        [JsonProperty("trophies")] internal int Trophies = Utils.ParseConfigInt("startingTrophes");
         [JsonProperty("legendary_trophies")] internal int Legendary_Trophies = 0;
 
         [JsonProperty("resources")] internal Resources Resources;

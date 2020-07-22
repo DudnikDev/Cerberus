@@ -71,7 +71,7 @@ namespace CRepublic.Royale.Core.Server_Components
                     case Logic.Enums.DBMS.MySQL:
                         using (MysqlEntities Database = new MysqlEntities())
                         {
-                            var Data = Database.ClanDB.Find(ClanID);
+                            var Data = Database.Clan.Find(ClanID);
 
                             if (!string.IsNullOrEmpty(Data?.Data))
                             {
@@ -146,7 +146,7 @@ namespace CRepublic.Royale.Core.Server_Components
                         {
                             using (MysqlEntities Database = new MysqlEntities())
                             {
-                                Database.ClanDB.Add(new Database.Clan
+                                Database.Clan.Add(new Database.Clan
                                 {
                                     ID = Clan.ClanID,
                                     Data = JsonConvert.SerializeObject(Clan, this.Settings)
@@ -202,7 +202,7 @@ namespace CRepublic.Royale.Core.Server_Components
                     {
                         using (MysqlEntities Database = new MysqlEntities())
                         {
-                            var Data = Database.ClanDB.Find(Clan.ClanID);
+                            var Data = Database.Clan.Find(Clan.ClanID);
 
                             if (Data != null)
                             {
