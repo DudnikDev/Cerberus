@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using CRepublic.Magic.Packets.Commands.Client;
 using CRepublic.Magic.Packets.Commands.Client.Battle;
 using CRepublic.Magic.Packets.Commands.Client.Clan;
+using CRepublic.Magic.Packets.Commands.Server;
 
 namespace CRepublic.Magic.Packets
 {

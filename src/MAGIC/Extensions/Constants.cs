@@ -21,12 +21,12 @@ namespace CRepublic.Magic.Extensions
         internal static readonly string UpdateServer = Utils.ParseConfigString("UpdateUrl");
         internal static readonly string[] ClientVersion = Utils.ParseConfigString("ClientVersion").Split('.');
 
-        internal static string[] AuthorizedIP =
+      /*  internal static string[] AuthorizedIP =
         {
             "192.168.0.5",
             "192.168.0.144",
             "115.133.41.158"
-        };
+        };*/
 
     }
 }
