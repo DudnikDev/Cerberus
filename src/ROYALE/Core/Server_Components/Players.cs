@@ -69,7 +69,8 @@ namespace CRepublic.Royale.Core.Server_Components
             {
                 Player Player = null;
 
-                switch (DBMS)
+           #region Old
+              /*  switch (DBMS)
                 {
                     case DBMS.MySQL:
                         using (MysqlEntities Database = new MysqlEntities())
@@ -113,8 +114,8 @@ namespace CRepublic.Royale.Core.Server_Components
                                 this.Save(Player, DBMS.Redis);
 
                         }
-                        break;
-                }
+                        break; */
+                } #endregion
                 return Player;
             }
             return this[UserId];
@@ -157,7 +158,9 @@ namespace CRepublic.Royale.Core.Server_Components
 
             Player.Decks = JsonConvert.DeserializeObject<Logic.Slots.Decks>(Files.Home.Starting_Home, this.Settings);
 
-            while (true)
+         #region Old
+
+         /*   while (true)
             {
                 switch (DBMS)
                 {
@@ -207,14 +210,17 @@ namespace CRepublic.Royale.Core.Server_Components
                     }
                 }
                 break;
-            }
+            } */
+                #endregion
 
             return Player;
         }
 
         internal void Save(Logic.Player Player, DBMS DBMS = Constants.Database)
         {
-            while (true)
+ 
+          #region Old
+          /*  while (true)
             {
 
                 switch (DBMS)
@@ -252,7 +258,8 @@ namespace CRepublic.Royale.Core.Server_Components
                     }
                 }
                 break;
-            }
+            }*/
+                #endregion
         }
     }
 }
