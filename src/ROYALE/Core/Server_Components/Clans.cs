@@ -66,7 +66,7 @@ namespace CRepublic.Royale.Core.Server_Components
             {
                 Clan Clan = null;
 
-                switch (DBMS)
+              /*  switch (DBMS)
                 {
                     case Logic.Enums.DBMS.MySQL:
                         using (MysqlEntities Database = new MysqlEntities())
@@ -114,8 +114,8 @@ namespace CRepublic.Royale.Core.Server_Components
                                 this.Save(Clan, Logic.Enums.DBMS.Redis);
 
                         }
-                        break;
-                }
+                        break; */
+                } 
                 return Clan;
             }
             return this[ClanID];
@@ -138,7 +138,7 @@ namespace CRepublic.Royale.Core.Server_Components
                 Clan = new Logic.Clan(ClanId);
             }
 
-            while (true)
+           /* while (true)
             {
                 switch (DBMS)
                 {
@@ -186,7 +186,7 @@ namespace CRepublic.Royale.Core.Server_Components
                             continue;
                         }
                 }
-                break;
+                break; */
             }
 
             return Clan;
@@ -194,7 +194,7 @@ namespace CRepublic.Royale.Core.Server_Components
 
         internal void Save(Logic.Clan Clan, Logic.Enums.DBMS DBMS = Constants.Database)
         {
-            while (true)
+         /*   while (true)
             {
                 switch (DBMS)
                 {
@@ -226,8 +226,8 @@ namespace CRepublic.Royale.Core.Server_Components
                         continue;
                     }
                 }
-                break;
-            }
+                break; 
+            } */
         }
     }
 }
