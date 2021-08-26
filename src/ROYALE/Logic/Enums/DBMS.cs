@@ -3,7 +3,7 @@
     public enum DBMS
     {
         MySQL = 0,
-        Redis = 1,
-        Both = 2
+        Both = 1,
+        Redis = 2,
     }
 }
