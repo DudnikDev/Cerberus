@@ -46,11 +46,11 @@ namespace CRepublic.Magic.Packets.Messages.Server.Battle
             this.Data.AddInt(this.Home.Replay_Info.Stats.Attacker_Stars);
             this.Data.AddInt(this.Home.Replay_Info.Stats.Destruction_Percentage); //Home percentage
 
-            this.Data.AddInt(this.Enemy.Finished ? this.Enemy.Replay_Info.Stats.Attacker_Stars : 0);
-            this.Data.AddInt(this.Enemy.Finished ? this.Enemy.Replay_Info.Stats.Destruction_Percentage : 0); //Enemy percentage
-            this.Data.AddInt(0); //Win or lost?
-            this.Data.AddInt(0); //Win or lost?
-            this.Data.AddInt(0); //Win or lost trophies
+            this.Data.AddInt(this.Enemy.Finished ? this.Enemy.Replay_Info.Stats.Attacker_Stars : 3);
+            this.Data.AddInt(this.Enemy.Finished ? this.Enemy.Replay_Info.Stats.Destruction_Percentage : 100); //Enemy percentage
+            this.Data.AddInt(1); //Win or lost?
+            this.Data.AddInt(1); //Win or lost?
+            this.Data.AddInt(1); //Win or lost trophies
 
             this.Data.AddByte(this.Enemy.Finished ? 3 : 2);
             this.Data.AddInt(2); //Replay Low ID
